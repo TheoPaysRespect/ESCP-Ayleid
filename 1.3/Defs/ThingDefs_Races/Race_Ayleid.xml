@@ -20,6 +20,7 @@
 			  <PlantHarvestYield>1.2</PlantHarvestYield>
 			  <HuntingStealth>1.1</HuntingStealth>
 			  <PawnTrapSpringChance>0.9</PawnTrapSpringChance>
+			  <ResearchSpeed>1.2</ResearchSpeed>
 		</statBases>
 
 		<race>
