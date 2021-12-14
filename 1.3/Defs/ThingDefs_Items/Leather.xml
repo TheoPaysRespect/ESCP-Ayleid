@@ -18,6 +18,7 @@
 		  <color>(109,90,72)</color>
 		  <commonality>0.0025</commonality>
 		</stuffProps>
+		<comps></comps>
 	</ThingDef>
 
 </Defs>
