@@ -5,7 +5,7 @@
     <defName>ESCP_NamerSettlementAyleidHouse</defName>
     <rulePack>
       <rulesStrings>
-        <li>r_name->The [AyleidCities]</li>
+        <li>r_name->[AyleidCities]</li>
         <li>r_name->[c] of [AyleidGods]</li>
       </rulesStrings>
 	  <rulesFiles>
