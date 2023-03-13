@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ========== [ESCP_Ayleid_NamerMale] ========== -->
+	<RulePackDef>
+		<defName>ESCP_Ayleid_NamerMale</defName>
+		<include>
+			<li>TribalWordUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[MaleList] [FamilyList]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>MaleList->ESCP_AyleidNames/AyleidMale</li>
+				<li>FamilyList->ESCP_AyleidNames/AyleidFamily</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+	<!-- ========== [ESCP_Ayleid_NamerFemale] ========== -->
+	<RulePackDef>
+		<defName>ESCP_Ayleid_NamerFemale</defName>
+		<include>
+			<li>TribalWordUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[FemaleList] [FamilyList]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>FemaleList->ESCP_AyleidNames/AyleidFemale</li>
+				<li>FamilyList->ESCP_AyleidNames/AyleidFamily</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+</Defs>

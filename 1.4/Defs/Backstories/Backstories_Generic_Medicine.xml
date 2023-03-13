@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[ESCP_AyleidBackstory_Adulthood_MedicineA]========== -->
+	<AlienRace.AlienBackstoryDef ParentName="ESCP_Ayleid_AdulthoodBase">
+		<defName>ESCP_AyleidBackstory_Adulthood_MedicineA</defName>
+		<title>torturer</title>
+		<titleShort>torturer</titleShort>
+		<baseDesc>[PAWN_nameDef] always took [PAWN_possessive] time while torturing [PAWN_possessive] victims. Not because [PAWN_pronoun] was bad at torturing, quite the opposite in fact. [PAWN_nameDef] just liked to see how much pain [PAWN_pronoun] could inflict until [PAWN_possessive] victim finally cracked.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+</Defs>
