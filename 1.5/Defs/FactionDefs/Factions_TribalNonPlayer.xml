@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef ParentName="ESCP_NonPlayerFactionBase_TribalCivil" Name="ESCP_AyleidNonPlayerFaction_Base">
+		<defName>ESCP_AyleidNonPlayerFaction_Civil</defName>
+		<label>Ayleid remnants</label>
+		<description>The remnants of the Ayleid Empire. The Ayleid were once thought long extinct, with their legacy being the ruins of their old civilisation. Recently the Ayleid have made their presence known, though they rarely venture from their new holdings.\n\nThe Ayleid are not exactly welcoming, as they wish to see their Empire rise to its former glory. Due to their isolation they have little to trade.</description>
+		<modExtensions>
+			<li Class="ESCP_RaceTools.SettlementPreference">
+				<chance>1.0</chance>
+				<useTemperatureRange>true</useTemperatureRange>
+				<temperatureRangeMin>-10</temperatureRangeMin>
+				<temperatureRangeMax>45</temperatureRangeMax>
+				<useRainfallRange>true</useRainfallRange>
+				<rainfallRangeMin>2000</rainfallRangeMin>
+				<rainfallRangeMax>5000</rainfallRangeMax>
+				<requiredHillLevels>
+					<li>SmallHills</li>
+					<li>LargeHills</li>
+				</requiredHillLevels>
+				<dislikedBiomeList>
+					<li>MorrowRim_Ashlands</li>
+					<li>MorrowRim_BlightedAshlands</li>
+					<li>MorrowRim_VolcanicAshlands</li>
+					<li>MorrowRim_AshSwamp</li>
+				</dislikedBiomeList>
+			</li>
+			<li Class="ESCP_RaceTools.FactionProperties">
+				<factionTags>
+					<li>ESCP_AyleidFaction</li>
+					<li>ESCP_AyleidFactionNonPlayer</li>
+				</factionTags>
+			</li>
+		</modExtensions>
+		<settlementGenerationWeight>0.5</settlementGenerationWeight>
+		<leaderTitle>king</leaderTitle>
+		<factionIconPath>World/WorldObjects/Expanding/ESCP_AyleidSettlement</factionIconPath>
+		<factionNameMaker>ESCP_Ayleid_NamerFaction</factionNameMaker>
+		<settlementNameMaker>ESCP_Ayleid_NamerSettlement</settlementNameMaker>
+		<caravanTraderKinds Inherit="False"/>
+		<visitorTraderKinds Inherit="False"/>
+		<allowedCultures>
+			<li>ESCP_AyleidCulture</li>
+		</allowedCultures>
+		<colorSpectrum>
+			<li>(0.85, 0.85, 0.85)</li>
+			<li>(0.95, 0.95, 0.85)</li>
+			<li>(0.85, 0.85, 0.75)</li>
+		</colorSpectrum>
+		<structureMemeWeights>
+			<ESCP_Structure_OriginDivinesEight MayRequire="Ludeon.RimWorld.Ideology">5</ESCP_Structure_OriginDivinesEight>
+		</structureMemeWeights>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Sarg.Alphamemes">AM_Artist</li>
+			<li MayRequire="Sarg.Alphamemes">AM_Sadist</li>
+		</requiredMemes>
+		<disallowedMemes Inherit="False">
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<disallowedPrecepts>
+			<li MayRequire="Sarg.Alphamemes">VME_CraftingQuality_Decreased</li>
+		</disallowedPrecepts>
+		<pawnGroupMakers>
+			<li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<ESCP_Ayleid_Tribal_Penitent>5</ESCP_Ayleid_Tribal_Penitent>
+					<ESCP_Ayleid_Tribal_Warrior>5</ESCP_Ayleid_Tribal_Warrior>
+					<ESCP_Ayleid_Tribal_Archer>10</ESCP_Ayleid_Tribal_Archer>
+					<ESCP_Ayleid_Tribal_Hunter>10</ESCP_Ayleid_Tribal_Hunter>
+					<ESCP_Ayleid_Tribal_HeavyArcher>10</ESCP_Ayleid_Tribal_HeavyArcher>
+					<ESCP_Ayleid_Tribal_Berserker>5</ESCP_Ayleid_Tribal_Berserker>
+					<ESCP_Ayleid_Tribal_ChiefRanged>3</ESCP_Ayleid_Tribal_ChiefRanged>
+					<ESCP_Ayleid_Tribal_ChiefMelee>1.5</ESCP_Ayleid_Tribal_ChiefMelee>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, ranged only -->
+				<kindDef>Combat</kindDef>
+				<commonality>60</commonality>
+				<options>
+					<ESCP_Ayleid_Tribal_Archer>10</ESCP_Ayleid_Tribal_Archer>
+					<ESCP_Ayleid_Tribal_Hunter>10</ESCP_Ayleid_Tribal_Hunter>
+					<ESCP_Ayleid_Tribal_HeavyArcher>10</ESCP_Ayleid_Tribal_HeavyArcher>
+					<ESCP_Ayleid_Tribal_ChiefRanged>5</ESCP_Ayleid_Tribal_ChiefRanged>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, melee only -->
+				<kindDef>Combat</kindDef>
+				<commonality>30</commonality>
+				<options>
+					<ESCP_Ayleid_Tribal_Penitent>10</ESCP_Ayleid_Tribal_Penitent>
+					<ESCP_Ayleid_Tribal_Warrior>10</ESCP_Ayleid_Tribal_Warrior>
+					<ESCP_Ayleid_Tribal_Berserker>10</ESCP_Ayleid_Tribal_Berserker>
+					<ESCP_Ayleid_Tribal_ChiefMelee>5</ESCP_Ayleid_Tribal_ChiefMelee>
+				</options>
+			</li>
+			<li>
+				<!-- breach-capable fights, breachers plus ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>5</commonality>
+				<options>
+					<ESCP_Ayleid_Tribal_Breacher>5</ESCP_Ayleid_Tribal_Breacher>
+					<ESCP_Ayleid_Tribal_Penitent>5</ESCP_Ayleid_Tribal_Penitent>
+					<ESCP_Ayleid_Tribal_Warrior>5</ESCP_Ayleid_Tribal_Warrior>
+					<ESCP_Ayleid_Tribal_Archer>10</ESCP_Ayleid_Tribal_Archer>
+					<ESCP_Ayleid_Tribal_Hunter>10</ESCP_Ayleid_Tribal_Hunter>
+					<ESCP_Ayleid_Tribal_HeavyArcher>10</ESCP_Ayleid_Tribal_HeavyArcher>
+					<ESCP_Ayleid_Tribal_Berserker>5</ESCP_Ayleid_Tribal_Berserker>
+					<ESCP_Ayleid_Tribal_ChiefRanged>3</ESCP_Ayleid_Tribal_ChiefRanged>
+					<ESCP_Ayleid_Tribal_ChiefMelee>1.5</ESCP_Ayleid_Tribal_ChiefMelee>
+				</options>
+			</li>
+			<li Class="VanillaPsycastsExpanded.PawnGroupMaker_PsycasterRaid" MayRequire="VanillaExpanded.VPsycastsE">
+				<!-- VE Psycaster raid -->
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<ESCP_Ayleid_Tribal_Penitent>5</ESCP_Ayleid_Tribal_Penitent>
+					<ESCP_Ayleid_Tribal_Warrior>5</ESCP_Ayleid_Tribal_Warrior>
+					<ESCP_Ayleid_Tribal_Archer>10</ESCP_Ayleid_Tribal_Archer>
+					<ESCP_Ayleid_Tribal_Hunter>10</ESCP_Ayleid_Tribal_Hunter>
+					<ESCP_Ayleid_Tribal_HeavyArcher>10</ESCP_Ayleid_Tribal_HeavyArcher>
+					<ESCP_Ayleid_Tribal_Berserker>5</ESCP_Ayleid_Tribal_Berserker>
+					<ESCP_Ayleid_Tribal_ChiefRanged>3</ESCP_Ayleid_Tribal_ChiefRanged>
+					<ESCP_Ayleid_Tribal_ChiefMelee>1.5</ESCP_Ayleid_Tribal_ChiefMelee>
+					<ESCP_Ayleid_Tribal_PsycasterFire>0.1</ESCP_Ayleid_Tribal_PsycasterFire>
+					<ESCP_Ayleid_Tribal_PsycasterFrost>0.1</ESCP_Ayleid_Tribal_PsycasterFrost>
+					<ESCP_Ayleid_Tribal_PsycasterStorm>0.1</ESCP_Ayleid_Tribal_PsycasterStorm>
+				</options>
+			</li>
+			<li>
+				<!-- Peaceful -->
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<ESCP_Ayleid_Tribal_Warrior>20</ESCP_Ayleid_Tribal_Warrior>
+					<ESCP_Ayleid_Tribal_Archer>10</ESCP_Ayleid_Tribal_Archer>
+					<ESCP_Ayleid_Tribal_Hunter>10</ESCP_Ayleid_Tribal_Hunter>
+					<ESCP_Ayleid_Tribal_HeavyArcher>10</ESCP_Ayleid_Tribal_HeavyArcher>
+					<ESCP_Ayleid_Tribal_Berserker>5</ESCP_Ayleid_Tribal_Berserker>
+					<ESCP_Ayleid_Tribal_ChiefRanged>3</ESCP_Ayleid_Tribal_ChiefRanged>
+					<ESCP_Ayleid_Tribal_ChiefMelee>1.5</ESCP_Ayleid_Tribal_ChiefMelee>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<ESCP_Ayleid_Tribal_Trader>1</ESCP_Ayleid_Tribal_Trader>
+				</traders>
+				<carriers>
+					<MorrowRim_Guar MayRequireAnyOf="SirMashedPotato.MorrowRim,SirMashedPotato.MorrowRim.JustTheAnimals">10</MorrowRim_Guar>
+					<Muffalo>6</Muffalo>
+					<Dromedary>5</Dromedary>
+					<Alpaca>2.5</Alpaca>
+					<Elephant>2</Elephant>
+				</carriers>
+				<guards>
+					<ESCP_Ayleid_Tribal_Warrior>7</ESCP_Ayleid_Tribal_Warrior>
+					<ESCP_Ayleid_Tribal_Archer>10</ESCP_Ayleid_Tribal_Archer>
+					<ESCP_Ayleid_Tribal_Hunter>10</ESCP_Ayleid_Tribal_Hunter>
+					<ESCP_Ayleid_Tribal_HeavyArcher>10</ESCP_Ayleid_Tribal_HeavyArcher>
+					<ESCP_Ayleid_Tribal_Berserker>7</ESCP_Ayleid_Tribal_Berserker>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<ESCP_Ayleid_Tribal_Warrior>7</ESCP_Ayleid_Tribal_Warrior>
+					<ESCP_Ayleid_Tribal_Archer>10</ESCP_Ayleid_Tribal_Archer>
+					<ESCP_Ayleid_Tribal_Hunter>10</ESCP_Ayleid_Tribal_Hunter>
+					<ESCP_Ayleid_Tribal_HeavyArcher>10</ESCP_Ayleid_Tribal_HeavyArcher>
+					<ESCP_Ayleid_Tribal_Berserker>7</ESCP_Ayleid_Tribal_Berserker>
+					<ESCP_Ayleid_Tribal_ChiefRanged>10</ESCP_Ayleid_Tribal_ChiefRanged>
+				</options>
+			</li>
+			<li>
+				<kindDef>Settlement_RangedOnly</kindDef>
+				<options>
+					<ESCP_Ayleid_Tribal_Archer>10</ESCP_Ayleid_Tribal_Archer>
+					<ESCP_Ayleid_Tribal_Hunter>10</ESCP_Ayleid_Tribal_Hunter>
+					<ESCP_Ayleid_Tribal_HeavyArcher>10</ESCP_Ayleid_Tribal_HeavyArcher>
+					<ESCP_Ayleid_Tribal_ChiefRanged>10</ESCP_Ayleid_Tribal_ChiefRanged>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Miners</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<ESCP_Ayleid_Tribal_Miner>1</ESCP_Ayleid_Tribal_Miner>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Hunters</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<ESCP_Ayleid_Tribal_Hunter>1</ESCP_Ayleid_Tribal_Hunter>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Loggers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<ESCP_Ayleid_Tribal_Logger>1</ESCP_Ayleid_Tribal_Logger>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Farmers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<ESCP_Ayleid_Tribal_Farmer>1</ESCP_Ayleid_Tribal_Farmer>
+				</options>
+			</li>
+		</pawnGroupMakers>
+	</FactionDef>
+</Defs>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ========== [ESCP_Ayleid_NamerFaction] ========== -->
+	<RulePackDef>
+		<defName>ESCP_Ayleid_NamerFaction</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->Ayleid remnants of [AyleidFamily]</li>
+				<li>r_name->Ayleid remnants of [AyleidGods]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>AyleidFamily->ESCP_AyleidNames/AyleidFamily</li>
+				<li>AyleidGods->ESCP_AyleidNames/AyleidGods</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+	<!-- ========== [ESCP_Ayleid_NamerSettlement] ========== -->
+	<RulePackDef>
+		<defName>ESCP_Ayleid_NamerSettlement</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[AyleidCities]</li>
+				<li>r_name(p=0.05)->[c] of [AyleidGods]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>AyleidCities->ESCP_AyleidNames/AyleidCities</li>
+				<li>c->ESCP_AyleidNames/AyleidFactionC</li>
+				<li>AyleidGods->ESCP_AyleidNames/AyleidGods</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+</Defs>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef ParentName="ESCP_InheritedRacialBonus_Base">
+		<defName>ESCP_GeneInheritedBonus_Ayleid</defName>
+		<label>Ayleid blood</label>
+		<description>Carriers of this gene exhibit some of the bonuses typically displayed by the Ayleid race, though at a comparatively weaker level.</description>
+		<iconPath>UI/Icons/Genes/ESCP_InheritedBonus/ESCP_GeneInheritedBonus_Ayleid</iconPath>
+		<statOffsets>
+			<PsychicSensitivity>0.05</PsychicSensitivity>
+			<GlobalLearningFactor>0.05</GlobalLearningFactor>
+			<SocialImpact>0.05</SocialImpact>
+		</statOffsets>
+		<displayOrderInCategory>2</displayOrderInCategory>
+	</GeneDef>
+</Defs>

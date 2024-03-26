@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ========== [ESCP_PlayerFactionBase_Industrial] ========== -->
+	<FactionDef ParentName="ESCP_PlayerFactionBase_Industrial">
+		<defName>ESCP_AyleidPlayerFaction_Industrial</defName>
+		<label>New Ayleid Arrivals</label>
+		<basicMemberKind>ESCP_AyleidPlayerPawnKind_Outlander</basicMemberKind>
+		<factionIconPath>World/WorldObjects/Expanding/ESCP_AyleidSettlement</factionIconPath>
+		<allowedCultures>
+			<li>ESCP_AyleidCulture</li>
+		</allowedCultures>
+		<startingResearchTags>
+			<li>ESCP_AyleidStart_Industrial</li>
+		</startingResearchTags>
+		<modExtensions>
+			<li Class="ESCP_RaceTools.FactionProperties">
+				<factionTags>
+					<li>ESCP_AyleidFaction</li>
+					<li>ESCP_AyleidFactionPlayer</li>
+				</factionTags>
+			</li>
+		</modExtensions>
+	</FactionDef>
+	<!-- ========== [ESCP_AyleidPlayerFactionBase_Tribal] ========== -->
+	<FactionDef ParentName="ESCP_PlayerFactionBase_Medieval">
+		<defName>ESCP_AyleidPlayerFaction_Medieval</defName>
+		<label>New Ayleid Kingdom</label>
+		<basicMemberKind>ESCP_AyleidPlayerPawnKind_Medieval</basicMemberKind>
+		<factionIconPath>World/WorldObjects/Expanding/ESCP_AyleidSettlement</factionIconPath>
+		<allowedCultures>
+			<li>ESCP_AyleidCulture</li>
+		</allowedCultures>
+		<startingResearchTags>
+			<li>ESCP_AyleidStart_Medieval</li>
+		</startingResearchTags>
+		<modExtensions>
+			<li Class="ESCP_RaceTools.FactionProperties">
+				<factionTags>
+					<li>ESCP_AyleidFaction</li>
+					<li>ESCP_AyleidFactionPlayer</li>
+				</factionTags>
+			</li>
+		</modExtensions>
+	</FactionDef>
+	<!-- ========== [ESCP_AyleidPlayerFactionBase_Tribal] ========== -->
+	<FactionDef ParentName="ESCP_PlayerFactionBase_Tribal">
+		<defName>ESCP_AyleidPlayerFaction_Tribal</defName>
+		<label>New Ayleid Tribe</label>
+		<basicMemberKind>ESCP_AyleidPlayerPawnKind_Tribal</basicMemberKind>
+		<factionIconPath>World/WorldObjects/Expanding/ESCP_AyleidSettlement</factionIconPath>
+		<allowedCultures>
+			<li>ESCP_AyleidCulture</li>
+		</allowedCultures>
+		<startingResearchTags>
+			<li>ESCP_AyleidStart_Tribal</li>
+		</startingResearchTags>
+		<modExtensions>
+			<li Class="ESCP_RaceTools.FactionProperties">
+				<factionTags>
+					<li>ESCP_AyleidFaction</li>
+					<li>ESCP_AyleidFactionPlayer</li>
+				</factionTags>
+			</li>
+		</modExtensions>
+	</FactionDef>
+</Defs>
