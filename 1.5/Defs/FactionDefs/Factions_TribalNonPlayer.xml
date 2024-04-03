@@ -18,10 +18,16 @@
 					<li>LargeHills</li>
 				</requiredHillLevels>
 				<dislikedBiomeList>
-					<li>MorrowRim_Ashlands</li>
-					<li>MorrowRim_BlightedAshlands</li>
-					<li>MorrowRim_VolcanicAshlands</li>
-					<li>MorrowRim_AshSwamp</li>
+					<li>Mashed_Ashlands_SwampAshlands</li>
+					<li>Mashed_Ashlands_Ashlands</li>
+					<li>Mashed_Ashlands_DustplainAshlands</li>
+
+					<li>Mashed_Ashlands_BlightedAshlands</li>
+					<li>Mashed_Ashlands_BlightedBogAshlands</li>
+
+					<li>Mashed_Ashlands_VolcanicAshlands</li>
+					<li>Mashed_Ashlands_VolcanicBadlandAshlands</li>
+					<!--<li>Mashed_Ashlands_VolcanicSulphurPitsAshlands</li>-->
 				</dislikedBiomeList>
 			</li>
 			<li Class="ESCP_RaceTools.FactionProperties">
@@ -153,7 +159,7 @@
 					<ESCP_Ayleid_Tribal_Trader>1</ESCP_Ayleid_Tribal_Trader>
 				</traders>
 				<carriers>
-					<MorrowRim_Guar MayRequireAnyOf="SirMashedPotato.MorrowRim,SirMashedPotato.MorrowRim.JustTheAnimals">10</MorrowRim_Guar>
+					<Mashed_Ashlands_Guar MayRequire="sirmashedpotato.ashlands">10</Mashed_Ashlands_Guar>
 					<Muffalo>6</Muffalo>
 					<Dromedary>5</Dromedary>
 					<Alpaca>2.5</Alpaca>
