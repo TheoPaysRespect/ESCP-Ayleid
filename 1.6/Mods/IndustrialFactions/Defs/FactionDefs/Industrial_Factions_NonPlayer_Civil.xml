@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef ParentName="ESCP_NonPlayerFactionBase_IndustrialCivil" Name="ESCP_Industrial_AyleidNonPlayerFaction_CivilBase" Abstract="True">
+		<modExtensions>
+			<li Class="ESCP_RaceTools.SettlementPreference">
+				<chance>1.0</chance>
+				<useTemperatureRange>true</useTemperatureRange>
+				<temperatureRangeMin>-10</temperatureRangeMin>
+				<temperatureRangeMax>45</temperatureRangeMax>
+				<useRainfallRange>true</useRainfallRange>
+				<rainfallRangeMin>2000</rainfallRangeMin>
+				<rainfallRangeMax>5000</rainfallRangeMax>
+				<requiredHillLevels>
+					<li>SmallHills</li>
+					<li>LargeHills</li>
+				</requiredHillLevels>
+				<dislikedBiomeList>
+					<li>Mashed_Ashlands_SwampAshlands</li>
+					<li>Mashed_Ashlands_Ashlands</li>
+					<li>Mashed_Ashlands_DustplainAshlands</li>
+
+					<li>Mashed_Ashlands_BlightedAshlands</li>
+					<li>Mashed_Ashlands_BlightedBogAshlands</li>
+
+					<li>Mashed_Ashlands_VolcanicAshlands</li>
+					<li>Mashed_Ashlands_VolcanicBadlandAshlands</li>
+					<!--<li>Mashed_Ashlands_VolcanicSulphurPitsAshlands</li>-->
+				</dislikedBiomeList>
+			</li>
+			<li Class="ESCP_RaceTools.FactionProperties">
+				<factionTags>
+					<li>ESCP_AyleidFaction</li>
+					<li>ESCP_AyleidFactionNonPlayer</li>
+				</factionTags>
+			</li>
+		</modExtensions>
+		<leaderTitle>king</leaderTitle>
+		<factionIconPath>World/WorldObjects/Expanding/ESCP_AyleidSettlement</factionIconPath>
+		<factionNameMaker>ESCP_Ayleid_NamerFaction</factionNameMaker>
+		<settlementNameMaker>ESCP_Ayleid_NamerSettlement</settlementNameMaker>
+		<allowedCultures>
+			<li>ESCP_AyleidCulture</li>
+		</allowedCultures>
+		<structureMemeWeights>
+			<ESCP_Structure_OriginDivinesEight MayRequire="Ludeon.RimWorld.Ideology">20</ESCP_Structure_OriginDivinesEight>
+		</structureMemeWeights>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Sarg.Alphamemes">AM_Artist</li>
+			<li MayRequire="Sarg.Alphamemes">AM_Sadist</li>
+		</requiredMemes>
+		<disallowedMemes Inherit="False">
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<disallowedPrecepts>
+			<li MayRequire="Sarg.Alphamemes">VME_CraftingQuality_Decreased</li>
+		</disallowedPrecepts>
+		<pawnGroupMakers>
+			<li>
+				<!-- Normal fights, standard mix -->
+				<kindDef>Combat</kindDef>
+				<options>
+					<ESCP_Industrial_AyleidVillager>5</ESCP_Industrial_AyleidVillager>
+					<ESCP_Industrial_AyleidTown_Guard>10</ESCP_Industrial_AyleidTown_Guard>
+					<ESCP_Industrial_AyleidGrenadier_Destructive>1.5</ESCP_Industrial_AyleidGrenadier_Destructive>
+					<ESCP_Industrial_AyleidMercenary_Slasher>7</ESCP_Industrial_AyleidMercenary_Slasher>
+					<ESCP_Industrial_AyleidMercenary_Gunner>10</ESCP_Industrial_AyleidMercenary_Gunner>
+					<ESCP_Industrial_AyleidMercenary_Elite>10</ESCP_Industrial_AyleidMercenary_Elite>
+					<ESCP_Industrial_AyleidTown_Councilman>10</ESCP_Industrial_AyleidTown_Councilman>
+				</options>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<ESCP_Industrial_AyleidVillager>20</ESCP_Industrial_AyleidVillager>
+					<ESCP_Industrial_AyleidVillager_Child MayRequire="Ludeon.RimWorld.Biotech">10</ESCP_Industrial_AyleidVillager_Child>
+					<ESCP_Industrial_AyleidTown_Guard>10</ESCP_Industrial_AyleidTown_Guard>
+					<ESCP_Industrial_AyleidTown_Councilman>10</ESCP_Industrial_AyleidTown_Councilman>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<ESCP_Industrial_AyleidTown_Trader>1</ESCP_Industrial_AyleidTown_Trader>
+				</traders>
+				<carriers>
+					<Muffalo>6</Muffalo>
+					<Dromedary>5</Dromedary>
+					<Alpaca>2</Alpaca>
+					<Elephant>1</Elephant>
+				</carriers>
+				<guards>
+					<ESCP_Industrial_AyleidVillager>3</ESCP_Industrial_AyleidVillager>
+					<ESCP_Industrial_AyleidTown_Guard>10</ESCP_Industrial_AyleidTown_Guard>
+					<ESCP_Industrial_AyleidGrenadier_Destructive>1.5</ESCP_Industrial_AyleidGrenadier_Destructive>
+					<ESCP_Industrial_AyleidMercenary_Slasher>7</ESCP_Industrial_AyleidMercenary_Slasher>
+					<ESCP_Industrial_AyleidMercenary_Gunner>10</ESCP_Industrial_AyleidMercenary_Gunner>
+					<ESCP_Industrial_AyleidMercenary_Elite>10</ESCP_Industrial_AyleidMercenary_Elite>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<ESCP_Industrial_AyleidVillager>10</ESCP_Industrial_AyleidVillager>
+					<ESCP_Industrial_AyleidTown_Guard>10</ESCP_Industrial_AyleidTown_Guard>
+					<ESCP_Industrial_AyleidGrenadier_Destructive>1.5</ESCP_Industrial_AyleidGrenadier_Destructive>
+					<ESCP_Industrial_AyleidMercenary_Slasher>7</ESCP_Industrial_AyleidMercenary_Slasher>
+					<ESCP_Industrial_AyleidMercenary_Gunner>10</ESCP_Industrial_AyleidMercenary_Gunner>
+					<ESCP_Industrial_AyleidMercenary_Elite>10</ESCP_Industrial_AyleidMercenary_Elite>
+					<ESCP_Industrial_AyleidTown_Councilman>10</ESCP_Industrial_AyleidTown_Councilman>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Miners</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<ESCP_Industrial_AyleidMiner>1</ESCP_Industrial_AyleidMiner>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Hunters</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<ESCP_Industrial_AyleidHunter>1</ESCP_Industrial_AyleidHunter>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Loggers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<ESCP_Industrial_AyleidLogger>1</ESCP_Industrial_AyleidLogger>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Farmers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<ESCP_Industrial_AyleidFarmer>1</ESCP_Industrial_AyleidFarmer>
+				</options>
+			</li>
+		</pawnGroupMakers>
+	</FactionDef>
+	<!-- ==========[ESCP_Industrial_AyleidNonPlayerFaction_Civil]========== -->
+	<FactionDef ParentName="ESCP_Industrial_AyleidNonPlayerFaction_CivilBase">
+		<defName>ESCP_Industrial_AyleidNonPlayerFaction_Civil</defName>
+		<label>Ayleid colonies (industrial)</label>
+		<description>These people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They usually work with simple machinery and defend themselves with advanced gunpowder weapons.\n\nThey are concerned with the practical matters of trade, trust, and survival.\n\nThis particular group holds civil behaviour in high regard.</description>
+	</FactionDef>
+</Defs>
